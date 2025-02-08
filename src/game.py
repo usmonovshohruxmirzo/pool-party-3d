@@ -11,6 +11,11 @@ player.speed = 5
 
 ground = Entity(model="plane", scale=(200, 1, 200), color=color.gray, collider="mesh")
 
+room = Entity(
+    model="./assets/models/fnaf_sb_vip_party_room.glb",
+    scale=1,
+)
+
 table_height = 1.2
 pool_table = Entity(
     model="cube",
