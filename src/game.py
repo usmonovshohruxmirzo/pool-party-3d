@@ -6,6 +6,8 @@ app = Ursina()
 
 Sky()
 
+DirectionalLight()
+
 player = FirstPersonController()
 player.speed = 5
 
