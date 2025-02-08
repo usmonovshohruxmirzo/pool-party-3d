@@ -1,22 +1,25 @@
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
-from random import uniform
+from ursina.shaders import lit_with_shadows_shader
 
 app = Ursina()
 
 Sky()
 
-DirectionalLight()
+sunlight = DirectionalLight(shadows=True, color=color.white)
 
 player = FirstPersonController()
 player.speed = 5
+player.x = 4
+player.z = 12
 
 ground = Entity(model="plane", scale=(200, 1, 200), color=color.gray, collider="mesh")
 
 room = Entity(
     model="./assets/models/fnaf_sb_vip_party_room.glb",
     scale=1,
-    position=(3, 0, -20)
+    position=(3, 0, -20),
+    shader=lit_with_shadows_shader  
 )
 
 table_height = 1.2
