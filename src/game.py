@@ -14,6 +14,7 @@ ground = Entity(model="plane", scale=(200, 1, 200), color=color.gray, collider="
 room = Entity(
     model="./assets/models/fnaf_sb_vip_party_room.glb",
     scale=1,
+    position=(3, 0, -20)
 )
 
 table_height = 1.2
