@@ -70,12 +70,12 @@ for i, pos in enumerate(ball_positions):
 cue_ball = balls[0]
 
 cue = Entity(
-    model="cube",
-    scale=(0.1, 0.1, 1),
-    color=color.brown,
-    position=(0, -0.2, 0.6),
+    model="./assets/models/cue.glb",
+    scale=(0.5, 0.5, 0.5),
+    position=(0, -0.2, 0.5),
     parent=camera,
-    visible=False
+    visible=False,
+    rotation=(0,90,0)
 )
 
 power_bar = Entity(model="cube", scale=(0.2, 0.1, 1), color=color.red, position=(-2, 3, -3), visible=False)
