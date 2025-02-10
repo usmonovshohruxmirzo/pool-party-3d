@@ -6,7 +6,7 @@ app = Ursina()
 
 Sky()
 
-sunlight = DirectionalLight(shadows=True, color=color.white)
+# sunlight = DirectionalLight(shadows=True, color=color.white)
 
 player = FirstPersonController()
 player.speed = 5
@@ -53,17 +53,23 @@ ball_positions = [
     (1.7, table_height + 0.25, -1.0), (1.7, table_height + 0.25, -0.5), (1.7, table_height + 0.25, 0), (1.7, table_height + 0.25, 0.5), (1.7, table_height + 0.25, 1.0)
 ]
 
-ball_colors = [
-    color.white,
-    color.red, color.red, color.red, color.red, color.red, color.red, color.red,
-    color.red,
-    color.red, color.red, color.red,
-    color.red, color.red, color.red, color.red
-]
+# ball_colors = [
+#     color.white,
+#     color.red, color.red, color.red, color.red, color.red, color.red, color.red,
+#     color.red,
+#     color.red, color.red, color.red,
+#     color.red, color.red, color.red, color.red
+# ]
 
 balls = []
 for i, pos in enumerate(ball_positions):
-    ball = Entity(model="sphere", scale=0.2, position=pos, color=ball_colors[i], collider="sphere")
+    ball = Entity(
+        model="sphere",
+        scale=0.2,
+        position=pos,
+        texture=f"./assets/textures/balls/Ball{i}.jpg",
+        collider="sphere",
+        )
     ball.velocity = Vec3(0, 0, 0)
     balls.append(ball)
 
