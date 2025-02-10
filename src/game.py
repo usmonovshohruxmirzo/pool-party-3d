@@ -78,9 +78,18 @@ cue = Entity(
     rotation=(0,90,0)
 )
 
-power_bar = Entity(model="cube", scale=(0.2, 0.1, 1), color=color.red, position=(-2, 3, -3), visible=False)
+power_bar = Entity(
+    model="cube",
+    scale=(1, 0.05, 0.1),
+    color=color.red,
+    position=(0.5, -0.4, 1.5),  
+    parent=camera, 
+    visible=False,
+    rotation=(0,90,0)
+)
 power = 0
 charging = False
+
 
 def hit_cue_ball():
     global power
