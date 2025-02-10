@@ -53,7 +53,6 @@ ball_positions = [
     (1.7, table_height + 0.25, -1.0), (1.7, table_height + 0.25, -0.5), (1.7, table_height + 0.25, 0), (1.7, table_height + 0.25, 0.5), (1.7, table_height + 0.25, 1.0)
 ]
 
-
 ball_colors = [
     color.white,
     color.red, color.red, color.red, color.red, color.red, color.red, color.red,
@@ -80,13 +79,12 @@ cue = Entity(
 )
 
 power_bar = Entity(
-    model="cube",
-    scale=(1, 0.05, 0.1),
+    parent=camera.ui,  
+    model="quad",  
+    scale=(0, 0.02), 
     color=color.red,
-    position=(0.5, -0.4, 1.5),  
-    parent=camera, 
-    visible=False,
-    rotation=(0,90,0)
+    position=(0, -0.4), 
+    visible=False
 )
 power = 0
 charging = False
