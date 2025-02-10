@@ -6,7 +6,12 @@ app = Ursina()
 
 Sky()
 
-# sunlight = DirectionalLight(shadows=True, color=color.white)
+sunlight = DirectionalLight(shadows=True, color=color.white)  
+sunlight.look_at(Vec3(1, -1, -0.5)) 
+ambient_light = AmbientLight(color=color.azure) 
+red_light = PointLight(position=(3, 2, -2), color=color.red)
+blue_light = PointLight(position=(-3, 1, 2), color=color.blue)
+green_light = PointLight(position=(0, 3, 0), color=color.green)
 
 player = FirstPersonController()
 player.speed = 5
