@@ -45,13 +45,14 @@ pocket_positions = [(-2.8, table_height + 0.1, -1.3), (2.8, table_height + 0.1, 
 pockets = [Entity(model="sphere", scale=0.3, position=pos, color=color.black, collider="sphere") for pos in pocket_positions]
 
 ball_positions = [
-    (0, table_height + 0.25, 0),
-    (1, table_height + 0.25, 0),
-    (1.2, table_height + 0.25, -0.3), (1.2, table_height + 0.25, 0.3),
-    (1.4, table_height + 0.25, -0.6), (1.4, table_height + 0.25, 0), (1.4, table_height + 0.25, 0.6),
-    (1.6, table_height + 0.25, -0.9), (1.6, table_height + 0.25, -0.3), (1.6, table_height + 0.25, 0.3), (1.6, table_height + 0.25, 0.9),
-    (1.8, table_height + 0.25, -1.2), (1.8, table_height + 0.25, -0.6), (1.8, table_height + 0.25, 0), (1.8, table_height + 0.25, 0.6), (1.8, table_height + 0.25, 1.2)
+    (0, table_height + 0.25, 0),  
+    (0.9, table_height + 0.25, 0),  
+    (1.1, table_height + 0.25, -0.25), (1.1, table_height + 0.25, 0.25),
+    (1.3, table_height + 0.25, -0.5), (1.3, table_height + 0.25, 0), (1.3, table_height + 0.25, 0.5),
+    (1.5, table_height + 0.25, -0.75), (1.5, table_height + 0.25, -0.25), (1.5, table_height + 0.25, 0.25), (1.5, table_height + 0.25, 0.75),
+    (1.7, table_height + 0.25, -1.0), (1.7, table_height + 0.25, -0.5), (1.7, table_height + 0.25, 0), (1.7, table_height + 0.25, 0.5), (1.7, table_height + 0.25, 1.0)
 ]
+
 
 ball_colors = [
     color.white,
